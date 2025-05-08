@@ -1,8 +1,9 @@
 import os
 import tempfile
-from parser import load_data, normalize_column_name
 
 import pytest
+
+from salary_report.parser import load_data, normalize_column_name
 
 CSV_VARIANTS = [
     ("hourly_rate", "60"),
