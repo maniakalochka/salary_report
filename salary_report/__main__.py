@@ -13,6 +13,7 @@ def main() -> None:
     parser.add_argument(
         "--report", required=True, help="Type of report to generate (e.g., payout)"
     )
+    parser.add_argument("--output", default="report.json", help="Path to JSON output file")
     args = parser.parse_args()
 
     data = []
