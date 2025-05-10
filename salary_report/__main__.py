@@ -4,17 +4,15 @@ from .output import console_output, json_output
 from .parser import load_data
 from .report.payout import PayoutReport
 
-REPORTS = {
-    "payout": PayoutReport
-}
+REPORTS = {"payout": PayoutReport}
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Salary report generator")
     parser.add_argument("files", nargs="+", help="CSV files with employee data")
-    parser.add_argument("--report",
-                        required=True,
-                        help="Type of report to generate (e.g., payout)")
+    parser.add_argument(
+        "--report", required=True, help="Type of report to generate (e.g., payout)"
+    )
     args = parser.parse_args()
 
     data = []

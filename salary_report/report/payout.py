@@ -9,10 +9,12 @@ class PayoutReport(BaseReport):
         result = defaultdict(list)
         for row in data:
             payout = row["hourly_rate"] * row["hours_worked"]
-            result[row["department"]].append({
-                "name": row["name"],
-                "hours": row["hours_worked"],
-                "rate": row["hourly_rate"],
-                "payout": payout
-            })
+            result[row["department"]].append(
+                {
+                    "name": row["name"],
+                    "hours": row["hours_worked"],
+                    "rate": row["hourly_rate"],
+                    "payout": payout,
+                }
+            )
         return dict(result)

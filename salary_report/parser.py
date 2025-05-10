@@ -9,7 +9,7 @@ def normalize_column_name(name: str) -> str:
 
 
 def load_data(filepath: str) -> list[Any]:
-    with open(filepath, 'r') as file:
+    with open(filepath, "r") as file:
         lines = file.readlines()
     headers = [normalize_column_name(h.strip()) for h in lines[0].split(",")]
     rows = []
