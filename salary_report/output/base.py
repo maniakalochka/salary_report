@@ -1,7 +1,8 @@
 from abc import ABC, abstractmethod
 
 
-class BaseReport(ABC):
+class OutputFormat(ABC):
+
     @abstractmethod
-    def generate(self, data):
+    def save(self, data: dict, filepath: str) -> None:
         raise NotImplementedError("Subclasses must implement this method")
