@@ -2,7 +2,6 @@ from .base import OutputFormat
 
 
 class ConsoleOutput(OutputFormat):
-
     def save(self, data: dict, filepath: str | None = None) -> None:
         for dept, entries in data.items():
             print(dept)
