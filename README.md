@@ -17,6 +17,7 @@ python3 -m salary_report data/data1.csv data/data2.csv --report payout --output 
 - Поддерживает различные названия колонки ставки: hourly_rate, rate, salary
 - Считает payout = hours_worked * hourly_rate
 - Группирует сотрудников по департаментам
+
 Генерирует:
 - читаемый текстовый отчёт в консоль
 - JSON-отчёт в файл (по умолчанию: report.json)
