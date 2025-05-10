@@ -30,11 +30,11 @@ def test_load_data_with_different_column_names(rate_col, rate_val):
 
 
 def test_load_data_multiple_rows():
-    csv_content = """
-    id,email,name,department,hours_worked,hourly_rate
-1,alice@example.com,Alice Johnson,Marketing,160,50
-2,bob@example.com,Bob Smith,Design,150,40
-"""
+    csv_content = (
+        "id,email,name,department,hours_worked,hourly_rate\n"
+        "1,alice@example.com,Alice Johnson,Marketing,160,50\n"
+        "2,bob@example.com,Bob Smith,Design,150,40\n"
+    )
 
     with tempfile.NamedTemporaryFile(mode="w+", delete=False) as tmp:
         tmp.write(csv_content)
